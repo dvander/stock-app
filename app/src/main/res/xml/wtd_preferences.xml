@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:key="api_settings"
+        app:title="@string/api_settings_header">
+
+        <Preference
+            app:title="Register"
+            app:summary="Tap to register at https://www.worldtradingdata.com/"
+            >
+            <intent
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:action="android.intent.action.VIEW"
+                android:data="https://www.worldtradingdata.com/"
+                />
+        </Preference>
+
+        <EditTextPreference
+            app:key="wtd_api_key"
+            app:title="@string/api_key_title"
+            app:summary="@string/note_wtd"/>
+    </PreferenceCategory>
+</PreferenceScreen>

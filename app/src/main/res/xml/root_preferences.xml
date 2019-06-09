@@ -1,0 +1,22 @@
+<androidx.preference.PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:key="preferenceScreen">
+
+    <PreferenceCategory app:title="@string/general_settings_header">
+        <ListPreference
+            app:defaultValue=""
+            app:entries="@array/api_names"
+            app:entryValues="@array/api_values"
+            app:key="api_kind"
+            app:title="@string/quote_api_title"
+            app:summary="@string/quote_api_help"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <Preference
+        app:title="@string/test_api"
+        app:key="test_api_button"
+        app:summary="@string/test_api_help"
+        />
+
+</androidx.preference.PreferenceScreen>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/stock_suggestion"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/symbol_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/almost_white"
+        android:gravity="center_vertical"
+        android:paddingStart="14dip"
+        android:paddingEnd="15dip"
+        android:background="@color/black"
+        android:textSize="24sp"
+        android:ellipsize="end"
+    />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/company_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/light_gray"
+        android:gravity="center_vertical"
+        android:paddingStart="14dip"
+        android:paddingEnd="15dip"
+        android:background="@color/black"
+        android:ellipsize="end"
+        android:textSize="16sp"
+        />
+</LinearLayout>

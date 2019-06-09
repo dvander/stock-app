@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="6sp"
+    android:paddingTop="6sp"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/remove_button"
+        android:layout_centerInParent="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="10sp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/ic_remove"/>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/remove_button"
+        android:orientation="vertical">
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/symbol_name"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textSize="28sp"
+            android:textColor="@color/white">
+        </TextView>
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/company_name"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textSize="16sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/light_gray">
+        </TextView>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/reorder_button"
+        android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/ic_baseline_reorder_24px"/>
+</RelativeLayout>
