@@ -27,6 +27,7 @@ import net.alliedmods.quotes.IQuoteService;
 import net.alliedmods.quotes.IexCloud;
 import net.alliedmods.quotes.Intrinio;
 import net.alliedmods.quotes.WorldTradingData;
+import net.alliedmods.quotes.YhFinance;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -86,6 +87,12 @@ public class Settings {
             if (api_key.isEmpty())
                 return null;
             return new WorldTradingData(api_key);
+        }
+        if (quote_api.equals("yhfinance")) {
+            String api_key = getSharedPref("yhf_api_key", "");
+            if (api_key.isEmpty())
+                return null;
+            return new YhFinance(api_key);
         }
 
         Log.e(TAG, "Quote service not recognized: " + quote_api);
@@ -244,7 +251,7 @@ public class Settings {
         return new String[]{
                 "AMZN",
                 "GOOG",
-                "FB",
+                "META",
                 "MSFT",
                 "AAPL",
         };

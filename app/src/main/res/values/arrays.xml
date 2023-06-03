@@ -5,6 +5,7 @@
         <item>World Trading Data</item>
         <item>Alpha Vantage</item>
         <item>Intrinio</item>
+        <item>YH Finance</item>
     </string-array>
 
     <string-array name="api_values">
@@ -12,5 +13,6 @@
         <item>worldtradingdata</item>
         <item>alphavantage</item>
         <item>intrinio</item>
+        <item>yhfinance</item>
     </string-array>
 </resources>

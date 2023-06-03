@@ -34,6 +34,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.HashMap;
 
 public class UrlBuilder {
     private String base_;
@@ -57,6 +58,10 @@ public class UrlBuilder {
     }
 
     public static String downloadUrl(URL url) throws IOException {
+        return downloadUrl(url, null);
+    }
+
+    public static String downloadUrl(URL url, HashMap<String, String> headers) throws IOException {
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
         final WeakReference<HttpURLConnection> con_ref =
@@ -74,6 +79,8 @@ public class UrlBuilder {
         try {
             connection.setRequestMethod("GET");
             connection.setRequestProperty("charset", "utf-8");
+            for (HashMap.Entry<String, String> entry : headers.entrySet())
+                connection.setRequestProperty(entry.getKey(), entry.getValue());
             connection.setConnectTimeout(10000);
             connection.setReadTimeout(10000);
             connection.connect();

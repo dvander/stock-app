@@ -111,6 +111,8 @@ public class SettingsActivity extends AppCompatActivity
                     QuoteResult result = null;
                     try {
                         List<QuoteResult> results = service.query(requests);
+                        if (results == null)
+                            throw new Exception("Results object is null");
                         if (results.size() == 0)
                             throw new Exception("No results were returned");
                         result = results.get(0);
@@ -176,6 +178,8 @@ public class SettingsActivity extends AppCompatActivity
                 addPreferencesFromResource(R.xml.intrinio_preferences);
             else if (api_kind.equals("worldtradingdata"))
                 addPreferencesFromResource(R.xml.wtd_preferences);
+            else if (api_kind.equals("yhfinance"))
+                addPreferencesFromResource(R.xml.yhfinance_preferences);
         }
     }
 }
